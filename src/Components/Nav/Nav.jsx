@@ -61,19 +61,19 @@ const Nav = () => {
   const navLink = (
     <>
       <NavLink
-        className="ml-3 p-2 text-lg font-normal text-[#131313CC] border-none no-underline"
+        className="ml-3 p-2 text-base font-normal text-[#131313CC] border-none no-underline"
         to="/"
       >
         <li>Home</li>
       </NavLink>
       <NavLink
-        className="ml-3 p-2 text-lg font-normal text-[#131313CC] border-none no-underline"
-        to="/UpdateProfile"
+        className="ml-3 p-2 text-base font-normal text-[#131313CC] border-none no-underline"
+        to="/AllTouristsSpot"
       >
         <li>All Tourists Spot</li>
       </NavLink>
       <NavLink
-        className="ml-3 p-2 text-lg font-normal text-[#131313CC] border-none no-underline"
+        className="ml-3 p-2 text-base font-normal text-[#131313CC] border-none no-underline"
         to="/addtouristspots"
       >
         <li>Add Tourists Spot</li>

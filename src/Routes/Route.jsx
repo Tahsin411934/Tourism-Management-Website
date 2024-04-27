@@ -8,6 +8,7 @@ import Signup from "../Auth/SignUp/Signup";
 import Home from "../Components/Home/Home";
 import TouristSpotDetails from "../Home-Tourists-Spots-Section/TouristSpotDetails";
 import AddTouristsSpot from "../Components/AddTouristsSpot/AddTouristsSpot";
+import AllTouristsSpot from "../Components/AllTouristsSpot/AllTouristsSpot";
 
 
   const Route = createBrowserRouter([
@@ -37,6 +38,11 @@ import AddTouristsSpot from "../Components/AddTouristsSpot/AddTouristsSpot";
         {
           path:"/addtouristspots",
           element:<AddTouristsSpot></AddTouristsSpot>
+        },
+        {
+          path:"/AllTouristsSpot",
+          element: <AllTouristsSpot></AllTouristsSpot>,
+          loader:()=> fetch('http://localhost:5000/touristSpots')
         }
       ]
     },
