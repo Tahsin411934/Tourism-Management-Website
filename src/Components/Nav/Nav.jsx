@@ -70,7 +70,7 @@ const Nav = () => {
         className="ml-3 p-2 text-lg font-normal text-[#131313CC] border-none no-underline"
         to="/UpdateProfile"
       >
-        <li>Al Tourists Spot</li>
+        <li>All Tourists Spot</li>
       </NavLink>
       <NavLink
         className="ml-3 p-2 text-lg font-normal text-[#131313CC] border-none no-underline"
