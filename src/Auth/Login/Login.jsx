@@ -17,6 +17,8 @@ const Login = () => {
   const location = useLocation();
   const {  signinUser, setLoading } = UseAuth();
   const navigate = useNavigate();
+  const localTheme= localStorage.getItem('theme');
+  
   const {
     register,
     reset,
@@ -43,7 +45,9 @@ const Login = () => {
   };
 
   return (
-    <div className="w-96 mx-auto shadow-2xl bg-[#fff] rounded-lg pt-5">
+    <div className=''>
+      <div className="pt-5"></div>
+    <div className=" w-[35%] mx-auto shadow-2xl bg-[#fff] rounded-lg pt-5">
       <Helmet>
         <title>LuxeVillas | Login</title>
       </Helmet>
@@ -98,6 +102,7 @@ const Login = () => {
         </div>
         <SocialLogin></SocialLogin>
       </form>
+    </div>
     </div>
   );
 };

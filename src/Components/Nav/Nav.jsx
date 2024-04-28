@@ -70,13 +70,13 @@ const Nav = () => {
         className="ml-3 p-2 text-lg font-normal text-[#131313CC] border-none no-underline"
         to="/UpdateProfile"
       >
-        <li>All Tourists Spot</li>
+        <li>Al Tourists Spot</li>
       </NavLink>
       <NavLink
         className="ml-3 p-2 text-lg font-normal text-[#131313CC] border-none no-underline"
-        to="/CustomerExperiences"
+        to="/addtouristspots"
       >
-        <li>Customer Experiences</li>
+        <li>Add Tourists Spot</li>
       </NavLink>
 
       

@@ -6,6 +6,9 @@ import Root from "../Layouts/Root";
 import Login from "../Auth/Login/Login";
 import Signup from "../Auth/SignUp/Signup";
 import Home from "../Components/Home/Home";
+import TouristSpotDetails from "../Home-Tourists-Spots-Section/TouristSpotDetails";
+import AddTouristsSpot from "../Components/AddTouristsSpot/AddTouristsSpot";
+
 
   const Route = createBrowserRouter([
     {
@@ -25,6 +28,15 @@ import Home from "../Components/Home/Home";
         {
             path:"/signup",
             element: <Signup></Signup>
+        },
+        {
+          path:"/tourist/:id",
+          element: <TouristSpotDetails></TouristSpotDetails>,
+          loader: ({params})=> fetch(`http://localhost:5000/tourist/${params.id}`)
+        },
+        {
+          path:"/addtouristspots",
+          element:<AddTouristsSpot></AddTouristsSpot>
         }
       ]
     },

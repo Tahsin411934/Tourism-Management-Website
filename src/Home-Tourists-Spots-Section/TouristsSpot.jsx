@@ -35,7 +35,7 @@ const TouristsSpot = ({touristsSpot}) => {
           <p>Price: </p>
           </div>
           <div className="card-actions">
-           <Link to={`/viewProperty/${id}`} ><button className="btn bg-[#006aff] text-[#fff]">View Property</button></Link> 
+           <Link to={`/tourist/${id}`} ><button className="btn bg-[#006aff] text-[#fff]">View Property</button></Link> 
           </div>
         </div>
       </div>
