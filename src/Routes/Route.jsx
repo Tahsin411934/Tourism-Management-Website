@@ -1,7 +1,4 @@
-import {
-    createBrowserRouter,
-    
-  } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import Root from "../Layouts/Root";
 import Login from "../Auth/Login/Login";
 import Signup from "../Auth/SignUp/Signup";
@@ -9,43 +6,56 @@ import Home from "../Components/Home/Home";
 import TouristSpotDetails from "../Home-Tourists-Spots-Section/TouristSpotDetails";
 import AddTouristsSpot from "../Components/AddTouristsSpot/AddTouristsSpot";
 import AllTouristsSpot from "../Components/AllTouristsSpot/AllTouristsSpot";
+import ViewSingleTouristSpot from "../Components/AllTouristsSpot/ViewSingleTouristSpot";
+import PrivateRoute from "../Components/PrivateRoute/PrivateRoute";
+import MyListPage from "../Components/MyListPage/MyListPage";
 
+const Route = createBrowserRouter([
+  {
+    path: "/",
+    element: <Root />,
 
-  const Route = createBrowserRouter([
-    {
-      path: "/",
-      element:<Root></Root> ,
-
-      children:[
-        {
-            path:"/",
-            element:<Home></Home>
-
-        },
-        {
-            path:"/login",
-            element: <Login></Login>
-        },
-        {
-            path:"/signup",
-            element: <Signup></Signup>
-        },
-        {
-          path:"/tourist/:id",
-          element: <TouristSpotDetails></TouristSpotDetails>,
-          loader: ({params})=> fetch(`http://localhost:5000/tourist/${params.id}`)
-        },
-        {
-          path:"/addtouristspots",
-          element:<AddTouristsSpot></AddTouristsSpot>
-        },
-        {
-          path:"/AllTouristsSpot",
-          element: <AllTouristsSpot></AllTouristsSpot>,
-          loader:()=> fetch('http://localhost:5000/touristSpots')
-        }
-      ]
-    },
-  ]);
+    children: [
+      {
+        path: "/",
+        element: <Home />
+      },
+      {
+        path: "/login",
+        element: <Login />
+      },
+      {
+        path: "/signup",
+        element: <Signup />
+      },
+      {
+        path: "/tourist/:id",
+        element: 
+        <PrivateRoute><TouristSpotDetails /></PrivateRoute>,
+        
+        loader: ({ params }) => fetch(`http://localhost:5000/tourist/${params.id}`)
+      },
+      {
+        path: "/addtouristspots",
+        element: <AddTouristsSpot />
+      },
+      {
+        path: "/AllTouristsSpot",
+        element: <AllTouristsSpot />,
+        loader: () => fetch('http://localhost:5000/touristSpot') 
+      },
+      {
+        path: "/ViewSingleTouristSpot/:id",
+        element: <ViewSingleTouristSpot />,
+        loader: ({ params }) => fetch(`http://localhost:5000/touristSpot/${params.id}`) 
+      },
+      {
+        path:"/MyListPage/:email",
+        element:<MyListPage/>,
+        loader: ({ params }) => fetch(`http://localhost:5000/touristSpotByEmail/${params.email}`) 
+      }
+    ]
+  }
+]);
 
 export default Route;
