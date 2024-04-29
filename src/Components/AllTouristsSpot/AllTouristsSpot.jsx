@@ -1,7 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import SingleTouristSpot from "./SingleTouristSpot";
 import { useState } from "react";
-
+import { Fade } from "react-awesome-reveal";
 
 const AllTouristsSpot = () => {
     const spots = useLoaderData();
@@ -25,11 +25,12 @@ const AllTouristsSpot = () => {
     console.log(spots)
     return (
         <div className="container mx-auto font-Murecho">
+            <Fade cascade damping={0.1}>
             <div className=" mb-10 text-center p-1 rounded-xl" >
                 <h1 className=' mt-5 text-2xl lg:text-2xl font-bold text-[#1A2B3D]'>Explore Your Tourist Spot </h1>
                 <p className='text-slate-600 mt-3'>
                     Prepare to experience  rich culture and explore the majestic beauties of Cox’s Bazar, Sylhet,  Bandarban, <br></br> Sajek Valley,   Rangamati etc. Plan your trip now!  </p>
-            </div> 
+            </div> </Fade>
         <div className="text-center mb-10">
                 <label ></label>
                 <select className="btn bg-[#006aff] text-white hover:bg-[#2d5081]" id="sort" value={sortBy} onChange={handleSortChange}>

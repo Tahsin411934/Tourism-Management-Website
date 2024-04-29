@@ -14,9 +14,9 @@ import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 const MostPopularDestinations = () => {
   return (
     <div className='container mx-auto w-[90%]'>
-      <div className=" mt-12 text-center p-1 rounded-xl" >
+      <div className=" mt-20 text-center p-1 rounded-xl" >
                 <h1 className=' text-2xl lg:text-2xl pb-3 font-bold text-[#1A2B3D]'>Most Popular Destinations</h1>
-                <p className='text-slate-600 pb-5'>
+                <p className='text-slate-600 pb-20'>
                 &quot; Prepare to experience  rich culture and explore the majestic beauties of Cox’s Bazar, Sylhet,  Bandarban, <br></br> Sajek Valley,   Rangamati etc. Plan your trip now!  &quot;</p>
             </div>
        <Swiper

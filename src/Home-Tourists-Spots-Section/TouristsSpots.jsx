@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import TouristsSpot from "./TouristsSpot";
 import MostPopularDestinations from "../Components/MostPopularDestinations/MostPopularDestinations";
+import Faq from "../Components/FAQ/Faq";
+import Countries from "../Components/Countries/Countries";
 
 
 
@@ -35,6 +37,8 @@ const TouristsSpots = () => {
                 </div>
             </div>
             <MostPopularDestinations></MostPopularDestinations>
+            <Faq/>
+            <Countries/>
 
         </div>
     );

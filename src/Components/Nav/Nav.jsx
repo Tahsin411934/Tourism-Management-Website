@@ -39,7 +39,7 @@ const Nav = () => {
         <img
           alt=""
           className="w-12 my-anchor-element  h-12 rounded-full ring-2 ring-offset-4 "
-          src={user.photoURL}
+          src={user?.photoURL}
         />
       </div>
    
@@ -90,12 +90,12 @@ const Nav = () => {
   );
 
   return (
-    <div className=" container mx-auto w-[95%] font-Murecho rounded-lg  ">
+    <div className=" container mx-auto w-[95%] font-Murecho rounded-lg shadow-lg  ">
       <div className="navbar ">
         <div className="navbar-start">
 
           <Tooltip className="z-50" anchorSelect=".my-anchor-element" place="top">
-            {user.displayName}
+            {user?.displayName}
           </Tooltip>
 
           {/* drop down */}

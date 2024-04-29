@@ -19,12 +19,12 @@ const TouristsSpot = ({touristsSpot}) => {
       <>
         <div className="container mx-auto">
             <div className=" font-display">
-      <div className="card w-80 bg-base-100 shadow-xl bg-contain mb-10 bg-center">
-        <figure className="w-[100%] pt-10">
+      <div className="card w-80 h-[23rem] bg-base-100 shadow-xl bg-contain mb-10 bg-center">
+        <figure className="w-[100%] ">
           <img
             src={image}
             alt="House Image"
-            className="rounded-xl h-[200px] "
+            className="rounded-xl h-[195px] "
           />
         </figure>
         <div className="flex justify-center items-center">
