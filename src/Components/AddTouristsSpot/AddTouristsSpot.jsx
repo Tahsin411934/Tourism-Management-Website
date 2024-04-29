@@ -27,7 +27,7 @@ const AddTouristsSpot = () => {
   }, [user, setValue]);
 
   const onSubmit = (data) => {
-    fetch('http://localhost:5000/touristSpots', {
+    fetch('http://localhost:5000/touristSpot', {
       method: "POST",
       headers: {
         'content-type':'application/json'
@@ -134,13 +134,13 @@ const AddTouristsSpot = () => {
           <label className="label">
             <span className="label-text">User Email</span>
           </label>
-          <input type="email" placeholder="User Email" className="input input-bordered" {...register('email')} required />
+          <input disabled type="email" placeholder="User Email" className="input input-bordered" {...register('email')} required />
         </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text">User Name</span>
           </label>
-          <input type="text" placeholder="User Name" className="input input-bordered" {...register('name')} required />
+          <input disabled type="text" placeholder="User Name" className="input input-bordered" {...register('name')} required />
         </div>
         <button type="submit" className="btn btn-primary">Add</button>
       </form>
