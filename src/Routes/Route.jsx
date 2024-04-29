@@ -10,6 +10,7 @@ import ViewSingleTouristSpot from "../Components/AllTouristsSpot/ViewSingleTouri
 import PrivateRoute from "../Components/PrivateRoute/PrivateRoute";
 import MyListPage from "../Components/MyListPage/MyListPage";
 import UpdatedPage from "../Components/UpdatedPage/UpdatedPage";
+import CardsOfSpecificCountry from "../Components/Countries/CardsOfSpecificCountry";
 
 const Route = createBrowserRouter([
   {
@@ -59,6 +60,11 @@ const Route = createBrowserRouter([
         path:"/update/:id",
         element:<UpdatedPage></UpdatedPage>,
         loader: ({ params }) => fetch(`http://localhost:5000/touristSpot/${params.id}`) 
+      },
+      {
+        path:"/countries/:country",
+        element:<CardsOfSpecificCountry/>,
+        loader:({params})=> fetch(`http://localhost:5000/touristSpot/${params.country}`)
       }
     ]
   }
