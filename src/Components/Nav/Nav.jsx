@@ -90,8 +90,8 @@ const Nav = () => {
   );
 
   return (
-    <div className=" container mx-auto w-[95%] font-Murecho ">
-      <div className="navbar bg-base-100">
+    <div className=" container mx-auto w-[95%] font-Murecho rounded-lg  ">
+      <div className="navbar ">
         <div className="navbar-start">
 
           {/* drop down */}
@@ -114,7 +114,7 @@ const Nav = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[50] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-3 z-[50] p-2 shadow  rounded-box w-52"
     
               
             >

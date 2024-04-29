@@ -9,6 +9,7 @@ import AllTouristsSpot from "../Components/AllTouristsSpot/AllTouristsSpot";
 import ViewSingleTouristSpot from "../Components/AllTouristsSpot/ViewSingleTouristSpot";
 import PrivateRoute from "../Components/PrivateRoute/PrivateRoute";
 import MyListPage from "../Components/MyListPage/MyListPage";
+import UpdatedPage from "../Components/UpdatedPage/UpdatedPage";
 
 const Route = createBrowserRouter([
   {
@@ -53,6 +54,11 @@ const Route = createBrowserRouter([
         path:"/MyListPage/:email",
         element:<MyListPage/>,
         loader: ({ params }) => fetch(`http://localhost:5000/touristSpotByEmail/${params.email}`) 
+      },
+      {
+        path:"/update/:id",
+        element:<UpdatedPage></UpdatedPage>,
+        loader: ({ params }) => fetch(`http://localhost:5000/touristSpot/${params.id}`) 
       }
     ]
   }

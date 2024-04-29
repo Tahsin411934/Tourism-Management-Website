@@ -18,6 +18,9 @@ const SingleTouristSpot = ({spot}) => {
       } = spot || {};
     return (
         <div>
+
+        
+
             <div className="">
             <div className=" bg-[#F3F3F3]  card  shadow-xl">
             <div className=" relative  p-3 rounded-xl   ">

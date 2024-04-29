@@ -8,8 +8,6 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import TouristsSpots from "../../Home-Tourists-Spots-Section/TouristsSpots";
 
 
-
-
 const Home = () => {
   return (
     <>
@@ -37,10 +35,10 @@ const Home = () => {
           {/* SwiperSlide 1 */}
           <SwiperSlide>
             <div
-              className="bg-cover bg-center hero min-h-screen w-full h-[370px] bg-gradient-to-r from-slate-900 to-black rounded-2xl "
+              className="bg-contain bg-center hero min-h-screen w-full  bg-gradient-to-r from-slate-900 to-black  "
               style={{
                 backgroundImage:
-                  "url(https://i.ibb.co/kXJSpy5/pexels-andreimike-1271619.jpg)",
+                  "url()",
               }}
             >
               <div className=" "></div>
@@ -76,7 +74,7 @@ Search Dreams place"
           {/* SwiperSlide 2 */}
           <SwiperSlide>
             <div
-              className=" bg-cover bg-center hero min-h-screen w-full h-[370px] bg-gradient-to-r from-slate-900 to-black rounded-2xl"
+              className=" bg-cover bg-center hero min-h-screen w-full h-[550px] bg-gradient-to-r from-slate-900 to-black rounded-2xl"
               style={{
                 backgroundImage:
                   "url(https://i.ibb.co/CV3pz56/pexels-quang-nguyen-vinh-222549-2132126.jpg)",
@@ -108,9 +106,9 @@ Search Dreams place"
 
 
           {/* SwiperSlide 3 */}
-          <SwiperSlide className="w-screen rounded-xl">
+          <SwiperSlide className="w-screen">
             <div
-              className=" bg-cover bg-center hero min-h-screen w-full h-[370px] bg-gradient-to-r from-slate-900 to-black rounded-2xl"
+              className=" bg-cover bg-center hero min-h-screen w-full h-[550px] bg-gradient-to-r from-slate-900 to-black rounded-2xl"
               style={{
                 backgroundImage:
                   "url(https://i.ibb.co/mJKPhgY/pexels-m-venter-792254-1659438.jpg)",

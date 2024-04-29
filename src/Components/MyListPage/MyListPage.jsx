@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { useState } from "react";
 import Swal from "sweetalert2";
 
@@ -40,6 +40,11 @@ const MyListPage = () => {
         });
     };
 
+
+
+
+
+    
     return (
         <div className="container mx-auto">
             <div className="overflow-x-auto">
@@ -65,7 +70,7 @@ const MyListPage = () => {
                                     <td>
                                         <div className="flex gap-3">
                                             
-                                            <button onClick={() => handleDlt(myAddedSpot._id)} className="btn btn-primary"> Update </button>
+                                           <Link to={`/update/${myAddedSpot._id}`}> <button  className="btn btn-primary"> Update </button></Link>
                                             <button onClick={() => handleDlt(myAddedSpot._id)} className="btn btn-primary"> Delete</button>
                                         </div>
                                     </td>
