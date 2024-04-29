@@ -34,7 +34,7 @@ const UpdatedPage = () => {
             // If successful, show success message
             Swal.fire({
               title: 'Success!',
-              text: 'Tourist spot added successfully',
+              text: 'Tourist spot Updated successfully',
               icon: 'success',
               confirmButtonText: 'Ok'
             });

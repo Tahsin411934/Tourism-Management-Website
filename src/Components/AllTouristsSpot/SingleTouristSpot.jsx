@@ -5,15 +5,11 @@ const SingleTouristSpot = ({spot}) => {
     const { 
         image,
         tourists_spot_name,
-        country_Name,
         location,
-        short_description,
         average_cost,
         seasonality,
         travel_time,
         total_visitors_per_year,
-        email,
-        name,
         _id 
       } = spot || {};
     return (
