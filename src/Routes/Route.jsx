@@ -11,12 +11,13 @@ import PrivateRoute from "../Components/PrivateRoute/PrivateRoute";
 import MyListPage from "../Components/MyListPage/MyListPage";
 import UpdatedPage from "../Components/UpdatedPage/UpdatedPage";
 import CardsOfSpecificCountry from "../Components/Countries/CardsOfSpecificCountry";
+import ErrorPage from "../Components/ErrorPage/ErrorPage";
 
 const Route = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
-
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
