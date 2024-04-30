@@ -15,7 +15,7 @@ const Countries = () => {
     const [countries, setCountries] = useState([]);
     console.log(countries)
     useEffect(() => {
-        fetch('http://localhost:5000/countries')
+        fetch("https://tourism-management-website-server-beta.vercel.app/countries")
             .then(res => res.json())
             .then(data => setCountries(data))
     }, [])
@@ -38,7 +38,7 @@ const Countries = () => {
                 <p className='text-slate-600 pb-12'>
                 &quot; Prepare to experience  rich culture and explore the majestic beauties of Cox’s Bazar, Sylhet,  Bandarban, <br></br> Sajek Valley,   Rangamati etc. Plan your trip now!  &quot;</p>
             </div>
-        <div className="container mx-auto grid grid-cols-3">
+        <div className="container mx-auto lg:grid grid-cols-3">
            {
             countries.map(country=> <Country key={country._id} country={country}></Country>)
            }

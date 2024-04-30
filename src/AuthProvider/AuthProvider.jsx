@@ -41,19 +41,20 @@ import auth from "../Firebase/Firebase.config";
   
     //signInWithEmailAndPassword
     const signinUser = (email, password) => {
+      setLoading(true);
       return signInWithEmailAndPassword(auth, email, password);
     };
   
   
     //googleLogin
     const googleLogin = () => { 
+      
       return signInWithPopup(auth, googleProvider);
     };
   
   
     //githubLogin
     const githubLogin = () => {
-      setLoading(true);
       return signInWithPopup(auth, GithubProvider);
     };
   

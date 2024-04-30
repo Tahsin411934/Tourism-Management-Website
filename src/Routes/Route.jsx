@@ -35,36 +35,36 @@ const Route = createBrowserRouter([
         element: 
         <PrivateRoute><TouristSpotDetails /></PrivateRoute>,
         
-        loader: ({ params }) => fetch(`http://localhost:5000/tourist/${params.id}`)
+        loader: ({ params }) => fetch(`https://tourism-management-website-server-beta.vercel.app/tourist/${params.id}`)
       },
       {
         path: "/addtouristspots",
-        element: <AddTouristsSpot />
+        element: <PrivateRoute><AddTouristsSpot /></PrivateRoute>
       },
       {
         path: "/AllTouristsSpot",
-        element: <AllTouristsSpot />,
-        loader: () => fetch('http://localhost:5000/touristSpot') 
+        element:<PrivateRoute> <AllTouristsSpot /></PrivateRoute>,
+        loader: () => fetch('https://tourism-management-website-server-beta.vercel.app/touristSpot') 
       },
       {
         path: "/ViewSingleTouristSpot/:id",
-        element: <ViewSingleTouristSpot />,
-        loader: ({ params }) => fetch(`http://localhost:5000/touristSpot/${params.id}`) 
+        element: <PrivateRoute><ViewSingleTouristSpot /></PrivateRoute>,
+        loader: ({ params }) => fetch(`https://tourism-management-website-server-beta.vercel.app/touristSpots/${params.id}`) 
       },
       {
         path:"/MyListPage/:email",
-        element:<MyListPage/>,
-        loader: ({ params }) => fetch(`http://localhost:5000/touristSpotByEmail/${params.email}`) 
+        element:<PrivateRoute><MyListPage/></PrivateRoute>,
+        loader: ({ params }) => fetch(`https://tourism-management-website-server-beta.vercel.app/touristSpotByEmail/${params.email}`) 
       },
       {
         path:"/update/:id",
         element:<UpdatedPage></UpdatedPage>,
-        loader: ({ params }) => fetch(`http://localhost:5000/touristSpot/${params.id}`) 
+        loader: ({ params }) => fetch(`https://tourism-management-website-server-beta.vercel.app/touristSpots/${params.id}`) 
       },
       {
         path:"/countries/:country",
-        element:<CardsOfSpecificCountry/>,
-        loader:({params})=> fetch(`http://localhost:5000/touristSpot/${params.country}`)
+        element:<PrivateRoute><CardsOfSpecificCountry/></PrivateRoute>,
+        loader:({params})=> fetch(`https://tourism-management-website-server-beta.vercel.app/${params.country}`)
       }
     ]
   }

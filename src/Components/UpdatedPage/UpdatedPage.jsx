@@ -54,6 +54,11 @@ const UpdatedPage = () => {
     
       return (
         <div className='w-[50%] shadow-2xl mx-auto p-10 '>
+          <h1 className=" text-center text-2xl font-bold italic mb-10">
+       Update Tourist Spots 
+        <h1 className="text-xs text-[#424242] font-normal mt-1">Update your Adeed <span className=" font-bold text-[#006aff]">Tourist</span> <span className="font-bold">Spot!</span>  </h1>
+      </h1>
+
         <form onSubmit={handleSubmit(onSubmit)}>
         {/* Form inputs */}
         <div className='flex gap-5'>
@@ -127,7 +132,14 @@ const UpdatedPage = () => {
         </div>
            
             
-            <button type="submit" className="btn btn-primary">Add</button> 
+        <div className='w-20 mx-auto mt-5'>
+       <button
+       type='submit'
+        className="hidden  font-semibold no-underline lg:inline-flex items-center justify-center px-4 py-2 text-base leading-6 text-white whitespace-no-wrap bg-[#006aff] rounded-md shadow-sm"
+      >
+       Update
+      </button>
+       </div>
           </form>
         </div>
       );

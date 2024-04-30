@@ -1,20 +1,22 @@
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
 
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import UseAuth from "../../Hook/useAuth";
 const SocialLogin = () => {
   
     const {googleLogin,githubLogin,setLoading} = UseAuth()
-    
+    const location = useLocation();
     const navigate = useNavigate()
    const handleGoogleLogin=()=>{
     setLoading(true)
     googleLogin()
     .then(()=>{
-        navigate("/")
+        setLoading(true)
+        navigate(location?.state ? location.state : "/");
+        setLoading(false)
     })
     .catch((error)=>{
        console.log(error.Message);
@@ -24,7 +26,8 @@ const SocialLogin = () => {
     setLoading(true)
     githubLogin()
     .then(()=>{
-        navigate("/")
+        setLoading(false)
+        navigate(location?.state ? location.state : "/");
     })
     .catch((error)=>{
         toast.error(error.Message);

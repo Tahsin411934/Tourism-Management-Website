@@ -1,11 +1,10 @@
 import { useForm } from "react-hook-form";
 import { Helmet } from "react-helmet";
-
-
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import SocialLogin from "../SocialLogin/SocialLogin";
 import UseAuth from "../../Hook/useAuth";
+import Swal from "sweetalert2";
 
 
 
@@ -17,7 +16,6 @@ const Login = () => {
   const location = useLocation();
   const {  signinUser, setLoading } = UseAuth();
   const navigate = useNavigate();
-  const localTheme= localStorage.getItem('theme');
   
   const {
     register,
@@ -27,33 +25,35 @@ const Login = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-
+    reset
+    
 //SIGN IN WITH EMAIL AND PASSWORD FUNCIONALITY
     signinUser(data.email, data.password)
       .then(() => {
-        setLoading(true);
         navigate(location?.state ? location.state : "/");
         setLoading(false);
       })
       .catch((error) => {
+        
+        setLoading(false);
         const errorMessage = error.message;
         setError(errorMessage);
-        setLoading(false);
+        Swal.fire(`${error}`);
         reset()
         
       });   
   };
 
   return (
-    <div className=''>
+    <div className='font-Murecho'>
       <div className="pt-5"></div>
-    <div className=" w-[35%] mx-auto shadow-2xl bg-[#fff] rounded-lg pt-5">
+    <div className="w-[80%] lg:w-[35%] mx-auto shadow-2xl bg-[#fff] rounded-lg pt-5">
       <Helmet>
-        <title>LuxeVillas | Login</title>
+        <title>ShareTrip| Login </title>
       </Helmet>
-     
-      <h1 className=" text-center text-2xl font-bold">
-        Welcome to <span className=" text-[#006aff]">Luxe</span>Villas
+      <h1 className=" text-center text-2xl font-bold italic">
+        Welcome Back 
+        <h1 className="text-xs text-[#424242] font-normal mt-1">Welcome to <span className=" font-bold text-[#006aff]">Share</span> <span className="font-bold">Trip!</span>  Sign In to continue</h1>
       </h1>
       <form className="card-body" onSubmit={handleSubmit(onSubmit)}>
         <div className="form-control">

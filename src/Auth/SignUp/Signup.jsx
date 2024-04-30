@@ -14,7 +14,7 @@ import UseAuth from "../../Hook/useAuth";
 const Signup = () => {
   const [passError, setPassError] = useState(null);
   const [pass, setPass] = useState(false);
-  const { createUser, updateUserProfile, setUser } = UseAuth();
+  const { createUser, updateUserProfile, setUser,setLoading } = UseAuth();
   const navigate = useNavigate();
   
   const {
@@ -45,6 +45,7 @@ console.log(data.email)
 //USER CREATE FUNCIONALITY
     createUser(data.email, data.password)
       .then((userCredential) => {
+        setLoading(false);
         const user = userCredential.user;
         updateUserProfile(data.name, data.photoURL)
           .then(() => {
@@ -76,13 +77,15 @@ console.log(data.email)
 
   return (
     <div className="font-display">
+      <div className="pt-5"></div>
       <div className="w-96 mx-auto shadow-2xl bg-[#fff] rounded-lg pt-5">
         <Helmet>
-          <title>LuxeVillas | Signup</title>
+          <title>ShareTrip | Signup</title>
         </Helmet>
-        <h1 className=" text-center text-2xl font-bold">
-          Welcome to <span className=" text-[#006aff]">Luxe</span>Villas
-        </h1>
+        <h1 className=" text-center text-2xl font-bold italic">
+        Welcome To  <span className=" font-bold text-[#006aff]">Share</span> <span className="font-bold">Trip!</span>
+        <h1 className="text-xs text-[#424242] font-normal mt-1">Welcome to <span className=" font-bold text-[#006aff]">Share</span> <span className="font-bold">Trip!</span>  Sign In to continue</h1>
+      </h1>
         
         {/* form start */}
         <form className="card-body" onSubmit={handleSubmit(onSubmit)}>

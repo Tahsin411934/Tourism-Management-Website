@@ -10,7 +10,7 @@ const TouristsSpots = () => {
     const [touristsSpots, setTouristsSpots] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/tourist')
+        fetch('https://tourism-management-website-server-beta.vercel.app/tourist')
             .then(res => res.json())
             .then(data => setTouristsSpots(data))
     }, [])
@@ -26,7 +26,7 @@ const TouristsSpots = () => {
                     touristsSpots.map(touristsSpot => <TouristsSpot key={touristsSpot.id} touristsSpot={touristsSpot}></TouristsSpot>)
                 }
             </div>
-            <div className="bg-gradient-to-r from-[#b9d9ff] to-[#fee1c3] w-full h-[170px] mt-10 mb-10">
+            <div className="container mx-auto rounded-2xl bg-gradient-to-r from-[#b9d9ff] to-[#fee1c3] w-full h-[170px] mt-10 mb-10">
                 <div className="lg:flex pt-[5%] items-center justify-center gap-56">
                     <div className=" text-[#1A2B3D]">
                         <h1 className="text-2xl font-bold">Members can save on lifestyle</h1>

@@ -1,6 +1,7 @@
 import { Link, useLoaderData } from "react-router-dom";
 import { useState } from "react";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet";
 
 const MyListPage = () => {
     const MyAddedList = useLoaderData();
@@ -46,7 +47,14 @@ const MyListPage = () => {
 
     
     return (
-        <div className="container mx-auto">
+        <div className="container mx-auto mb-10">
+            <Helmet>
+          <title>ShareTrip | My List</title>
+        </Helmet>
+             <h1 className=" text-center text-2xl font-bold italic mt-10 mb-10 lg:w-[95%] mx-auto">
+             Explore your Added dreams Tourist Spots
+        <h1 className="text-xs text-[#424242] font-normal mt-1">you can Edit Your  <span className=" font-bold text-[#006aff]">Tourist Spots!</span> <span className="font-bold"></span>  </h1>
+      </h1>
             <div className="overflow-x-auto">
                 <table className="table">
                     {/* head */}
@@ -71,7 +79,7 @@ const MyListPage = () => {
                                         <div className="flex gap-3">
                                             
                                            <Link to={`/update/${myAddedSpot._id}`}> <button  className="btn btn-primary"> Update </button></Link>
-                                            <button onClick={() => handleDlt(myAddedSpot._id)} className="btn btn-primary"> Delete</button>
+                                            <button onClick={() => handleDlt(myAddedSpot._id)} className="btn bg-red-500"> Delete</button>
                                         </div>
                                     </td>
                                 </tr>
