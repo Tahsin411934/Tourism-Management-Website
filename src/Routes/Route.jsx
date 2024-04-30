@@ -65,7 +65,7 @@ const Route = createBrowserRouter([
       {
         path:"/countries/:country",
         element:<PrivateRoute><CardsOfSpecificCountry/></PrivateRoute>,
-        loader:({params})=> fetch(`https://tourism-management-website-server-beta.vercel.app/${params.country}`)
+        loader:({params})=> fetch(`https://tourism-management-website-server-beta.vercel.app/touristSpot/${params.country}`)
       }
     ]
   }

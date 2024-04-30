@@ -3,7 +3,7 @@ const ErrorPage = () => {
   return (
     <div>
       <Helmet>
-      <title>LuxeVillas | error</title>
+      <title>ShareTrip | error</title>
     </Helmet>
       <section className="flex items-center  p-16 bg-gray-900 text-gray-100">
         <div className="container flex flex-col items-center justify-center px-5 mx-auto my-8">

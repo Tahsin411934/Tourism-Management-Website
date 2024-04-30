@@ -18,7 +18,7 @@ const TouristSpotDetails = () => {
     return (
         <div className="container mx-auto font-display">
             <Helmet>
-      <title>LuxeVillas | View Tourist Spot</title>
+      <title>ShareTrip | View Tourist Spot</title>
     </Helmet>
             <div className="">
                 <div className="hero-content flex-col gap-10 items-center  lg:flex-row">
