@@ -73,7 +73,7 @@ const AddTouristsSpot = () => {
           <title>ShareTrip | AddTouristsSpot</title>
         </Helmet>
     <div className="pt-5 mb-5">
-    <div className='w-[50%] shadow-2xl mx-auto p-10 '>
+    <div className='lg:w-[50%] shadow-2xl mx-auto p-10 '>
     
       <form onSubmit={handleSubmit(onSubmit)}>
       <h1 className=" text-center text-2xl font-bold italic mb-10">
@@ -116,7 +116,7 @@ const AddTouristsSpot = () => {
           </div>
           </div>
        
-        <div className='flex gap-5'>
+        <div className='lg:flex gap-5'>
           <div className="form-control w-[100%]">
             <label className="label">
               <span className="label-text">Location</span>
@@ -140,7 +140,7 @@ const AddTouristsSpot = () => {
         </div>
 
 
-        <div className='flex gap-5'>
+        <div className='lg:flex gap-5'>
           <div className="form-control w-[100%]">
             <label className="label">
               <span className="label-text">Seasonality</span>
