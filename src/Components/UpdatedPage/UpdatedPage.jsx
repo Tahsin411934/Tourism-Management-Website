@@ -13,7 +13,7 @@ const UpdatedPage = () => {
     const updateSpot = useLoaderData()
     console.log(updateSpot._id)
     const onSubmit = (data) => {
-        fetch(`http://localhost:5000/touristSpot/${updateSpot._id}`, {
+        fetch(`https://tourism-management-website-server-beta.vercel.app/touristSpots/${updateSpot._id}`, {
           method: "PUT",
           headers: {
             'content-type':'application/json'
