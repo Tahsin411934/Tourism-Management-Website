@@ -1,6 +1,6 @@
 # Project Name: ShareTrip 
  ● Tourism Management website
-Live Link: https://tourism-management-websi-220a9.web.app/
+Live Link: https://assignment-10-af.netlify.app/
 
 
 
