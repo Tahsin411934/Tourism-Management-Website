@@ -35,6 +35,17 @@ ShareTrip project is a website dedicated to exploring tourist spots around the w
 - **Dark/Light Theme Toggle**: Allows users to switch between dark and light themes on the home page.
 - **External Packages**: Implements at least 2 external packages such as Loie React, React-simple-typewriter, React Awesome reveal, or React-tooltip.
 
+### Installation
 
+1. **Clone the repository:**
+  
+       git clone "https://github.com/Tahsin411934/FITFOCUS-client.git"
+
+2. **Install Dependencies:**
+  
+       npm i
+2. **Run Project:**
+  
+       npm run dev
 
 
